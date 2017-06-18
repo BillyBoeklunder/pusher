@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class PicturesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $users = factory(App\Entities\User::class, 5)->create();
+        $pictures = factory(App\Entities\Picture::class, 5)->create([
+            'user_id' => 2
+        ]);
     }
 }
