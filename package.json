@@ -1,21 +1,37 @@
 {
   "private": true,
-  "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch-poll": "npm run watch -- --watch-poll",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  "name": "pusher",
+  "version": "1.0.0",
+  "author": "oleblaesing <ole.blaesing@web.de> (https://github.com/oleblaesing)",
+  "contributors": [
+    "oblaesing <ole.blaesing@web.de> (https://bitbucket.org/oblaesing)",
+    "BillyBoeklunder (https://bitbucket.org/BillyBoeklunder)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BillyBoeklunder/pusher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BillyBoeklunder/pusher/issues",
+    "email": "ole.blaesing@web.de"
   },
   "devDependencies": {
-    "axios": "^0.15.3",
-    "bootstrap-sass": "^3.3.7",
-    "cross-env": "^3.2.3",
-    "jquery": "^3.1.1",
-    "laravel-mix": "0.*",
-    "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "watch": "NODE_ENV=development ./node_modules/.bin/webpack --watch --progress --hide-modules",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p --progress --hide-modules"
   }
 }
