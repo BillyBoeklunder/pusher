@@ -11,8 +11,10 @@ class PicturesTableSeeder extends Seeder
      */
     public function run()
     {
-        $pictures = factory(App\Entities\Picture::class, 5)->create([
-            'user_id' => 2
+        $pictures = factory(App\Entities\Picture::class, 50)->create([
+            'user_id' => function() {
+                return \App\Entities\User::all()->random()->id;
+            },
         ]);
     }
 }

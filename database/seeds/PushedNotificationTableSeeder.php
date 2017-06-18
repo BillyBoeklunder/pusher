@@ -15,7 +15,7 @@ class PushedNotificationTableSeeder extends Seeder
         $allNotifications = \App\Entities\Notification::all();
 
         $usedPairs = [];
-        $max = 400;
+        $max = 600;
         for($i = 0; $i < $max; $i++) {
 
             $userId = $allUsers->random()->id;

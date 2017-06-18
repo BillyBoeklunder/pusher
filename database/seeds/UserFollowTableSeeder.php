@@ -16,8 +16,8 @@ class UserFollowTableSeeder extends Seeder
         $lastIndex = 0;
         for($i = 0; $i < $relationCount; $i++) {
             DB::table('user_follow')->insert([
-                'user_id' => $users[$lastIndex],
-                'followed_user_id' => $users[$lastIndex+1],
+                'user_id' => $users[$lastIndex]->id,
+                'followed_user_id' => $users[$lastIndex+1]->id,
             ]);
             $lastIndex += 1;
         }
