@@ -34,4 +34,5 @@ class UsersTableSeeder extends Seeder
             'email' => 'jinthai23513627424@gmail.com',
             'password' => bcrypt('secret'),
         ]);
+    }
 }
